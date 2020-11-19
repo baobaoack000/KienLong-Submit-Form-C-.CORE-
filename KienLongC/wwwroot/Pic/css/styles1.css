@@ -1,0 +1,13 @@
+﻿.form-group {
+    margin-top: 57px;
+    margin-bottom: 16px;
+}
+p{
+    margin: 0 0 10px;
+}
+.form-wrapper {
+    width: 2000px;
+    padding: 53px 20px 90px;
+    padding: 0px 20px 90px;
+    margin: 0 auto
+}

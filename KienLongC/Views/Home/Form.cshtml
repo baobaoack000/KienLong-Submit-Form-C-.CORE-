@@ -1,0 +1,201 @@
+﻿@model IEnumerable<KienLongC.Models.Form>
+@{
+    ViewData["Title"] = "FormTest";
+}
+
+
+<div>
+    <h4>Form</h4>
+    <hr />
+    @*<dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model)
+            </dd>
+        </dl>*@
+    <div>
+
+        <div class="text-capitalize float-lg-left">
+
+
+            <p>Total Email Count : @ViewBag.Count</p>
+
+            @*@foreach (var i in Model)
+                {
+                    <p> total  : @Html.DisplayFor(m => i.StaffName)</p>
+                }
+                @foreach (var i in Model.Where(a => a.Rating == "Ok").Count().ToString())
+                {
+                    <p> Ok custommer : @Html.DisplayFor(m => i)</p>
+                }
+                @foreach (var i in Model.Where(a => a.Rating == "Dissatisfied").Count().ToString())
+                {
+                    <p> Dissatisfied custommer : @Html.DisplayFor(m => i)</p>
+                }*@
+        </div>
+    </div>
+
+</div>
+<table>
+    <tr>
+        <td>
+            <div class="float-xl-left">
+                <canvas id="pieChart" style="width: 300px;"></canvas>
+            </div>
+        </td>
+        <td>
+            <div>
+                <canvas id="horizontalBar" style="width: 300px;"></canvas>
+            </div>
+        </td>
+        <td>
+            <div>
+                <canvas id="lineChart" style="width: 300px;"></canvas>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="table-wrapper-scroll-y my-custom-scrollbar" style="position: relative; height: 400px; overflow: auto;display: block;">
+    <table class="table table-bordered table-striped mb-0">
+        <thead style="position: sticky ;top: 0; background-color:white">
+            <tr>
+                <th scope="col">
+                    Date(dd/mm/yy Time)
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.EmailInput)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Rating)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.ContactType)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.StaffName)
+                </th>
+                <th>
+                    hiiii
+                </th>
+                <th scope="col">
+                    Handler
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td scope="row">@Html.DisplayFor(model => i.RegisDate)</td>
+                    <td scope="row">@Html.DisplayFor(model => i.ID)</td>
+                    <td scope="row">@Html.DisplayFor(model => i.EmailInput)</td>
+                    <td scope="row">@Html.DisplayFor(model => i.Rating)</td>
+                    <td scope="row">@Html.DisplayFor(model => i.ContactType)</td>
+                    <td scope="row"> @Html.DisplayFor(model => i.StaffName)</td>
+                    <td>@Html.DisplayFor(model => i.StaffName)</td>
+                    <td scope="row"><a asp-action="Edit" asp-route-id="@i.ID">Edit</a> </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+<div>
+
+   
+
+</div>
+
+<div style=" padding: 50px 20px 60px;">
+    @*<a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |*@
+    <a class="" asp-action="Index">Back To Survey</a>
+</div>
+
+@section Scripts
+{
+    <script src="~/lib/Scripts/mdb.min.js"></script>
+    <script type="text/javascript" language="javascript">
+
+
+        var ctxP = document.getElementById("pieChart").getContext('2d');
+        var myPieChart = new Chart(ctxP, {
+            type: 'pie',
+            data: {
+                labels: ["Rất hài lòng", "Tốt", "Bình thường, chấp nhận được", "Chưa tốt","Quá tệ"],
+                datasets: [{
+                    data: [@ViewData["Happy"], @ViewData["Ok"], @ViewData["normal"], @ViewData["no"], @ViewData["bad"]],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#541743","#f75431"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#541743","#f75431"]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+
+
+            new Chart(document.getElementById("horizontalBar"), {
+                "type": "horizontalBar",
+                "data": {
+                    "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+                    "datasets": [{
+                        "label": "Top Employe",
+                        "data": [11, 33, 55, 12, 86, 23, 14],
+                        "fill": false,
+                        "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+                            "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
+                            "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+                        ],
+                        "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+                            "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"
+                        ],
+                        "borderWidth": 1
+                    }]
+                },
+                "options": {
+                    "scales": {
+                        "xAxes": [{
+                            "ticks": {
+                                "beginAtZero": true
+                            }
+                        }]
+                    }
+                }
+            });
+
+            //line
+            var ctxL = document.getElementById("lineChart").getContext('2d');
+            var myLineChart = new Chart(ctxL, {
+                type: 'line',
+                data: {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [{
+                        label: "Total Email status",
+                        data: [@ViewBag.count,23,41,20,33,42,60],
+                        backgroundColor: [
+                            'rgba(105, 0, 132, .2)',
+                        ],
+                        borderColor: [
+                            'rgba(200, 99, 132, .7)',
+                        ],
+                        borderWidth: 2
+                    },
+                    ]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+
+
+
+
+    </script>
+
+}

@@ -1,0 +1,401 @@
+﻿@addTagHelper "BotDetect.Web.Mvc.CaptchaTagHelper, BotDetect.Web.Mvc"
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/Pic/css/styles1.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" />
+
+<!-- Bootstrap 4 template -->
+<div class="flex-grow-1 d-flex flex-column">
+    <div class="container form-wrapper">
+        <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto" id="content">
+                <div class="row">
+                    <div class="col-md pt-5">
+
+                        <section id="buttons" class="pb-2">
+                            <div class="row">
+                            </div>
+                        </section>
+
+                        <section id="cards" class="bg-faded py-2">
+                            <div class="">
+                                <div id="carouselExampleIndicators" class="carousel slide jumbotron" data-ride="carousel" data-interval="2000">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="jumbotron w-100 py-7 mx-auto">
+                                                <h1 class="display-2">Hello, world!</h1>
+                                                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="jumbotron w-100 py-7 mx-auto">
+                                                <h1 class="display-2">こんにちは世界 !</h1>
+                                                <p class="lead">これはシンプルなヒーローユニットであり、注目のコンテンツや情報に特別な注意を向けるためのシンプルなジャンボトロンスタイルのコンポーネントです。</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="jumbotron w-100 py-7 mx-auto">
+                                                <h1 class="display-2">你好, 世界 !</h1>
+                                                <p class="lead">这是一个简单的英雄单元，是一个简单的巨型广告风格的组件，用于引起人们对特色内容或信息的更多关注。</p>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                                <!-- Jumbotron -->
+
+                            </div>
+                        </section>
+
+                        <!--WIzard step by step-->
+
+                        <section id="forms" class="py-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container mt-3">
+                                        <h2 style="word-wrap: break-word; overflow-wrap: break-word; white-space: normal; display: block;">
+                                            Monkey Survey
+                                        </h2>
+
+                                        <br>
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link active text-primary" data-toggle="tab" href="#home">Basic</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#menu1">Additional 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#menu2">Additional 2</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+
+                                        <div class="tab-content">
+                                            <!-- Slide Function -->
+
+
+                                            <div class="form-group-container" style="color:slategray">
+                                                <br>
+                                                <br>
+                                                <p>Cảm ơn quý doanh nghiệp đã đồng ý tham gia vào bảng khảo sát về nhu cầu của doanh nghiệp về tài chính của Ngân hàng TNHH Một thành viên United Overseas Bank (Việt Nam). Mục đích của bảng khảo sát giúp tìm hiểu tình hình hoạt động kinh doanh và nhu cầu sử dụng dịch vụ ngân hàng của doanh nghiệp để thúc đẩy tăng trưởng doanh thu.</p>
+                                                <p>Khảo sát này sẽ kéo dài trong vòng 5 phút, và tất cả các thông tin quý doanh nghiệp cung cấp sẽ được bảo mật tuyệt đối.</p>
+                                                <br>
+                                                <br>
+                                                <p>Doanh nghiệp vui lòng cung cấp thông tin chi tiết theo hướng dẫn như bên dưới.</p>
+                                                <p>* Thông tin bắt buộc</p>
+                                                <br>
+                                                <br>
+
+                                            </div>
+                                            <div id="home" class="container tab-pane fade">
+
+                                            </div>
+                                            <div id="menu1" class="container tab-pane fade">
+                                                <br>
+                                                <h3>Google Doc </h3>
+                                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXS2OiunLcCeZNKejZ_PfdHkqWg0YSrewIosae4-c91UXzrA/viewform?embedded=true" width="640" height="1082">Loading…</iframe></p>
+                                            </div>
+                                            <div id="menu2" class="container tab-pane fade">
+                                                <br>
+                                                <h3>Template </h3>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                                <script type="text/javascript" src="https://form.jotform.com/jsform/202321991145450"></script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <!-- Form -->
+                        @model Form
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "TrueSurvey", onsubmit="return checkIt()"}))
+                        {
+                          
+                            
+                                <section>
+                                    <div class=" grey lighten-3 px-3 mb-0 line-numbers">
+                                        <div class="form-group ">
+
+                                            <label for="Email">1. Email Address</label>
+                                            @Html.TextBoxFor(m => m.EmailInput, new { id = "Email", type = "email", @class = "form-control", placeholder = "name@example.com" })
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label for="Select1">2. Quận</label>
+                                            <select class="form-control" id="Select1" name="District">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+
+                                        </div>
+
+                                        @*<div class="form-group" id="Payment">
+            <Label>3. Payment Option</Label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Payment" id="Radios1" value="Payment 1" checked>
+                <label class="form-check-label" for="Radios1">
+                    Payment 1
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Payment" id="Radios2" value="Payment 2">
+                <label class="form-check-label" for="Radios2">
+                    Payment 2
+                </label>
+            </div>
+        </div>*@
+
+                                        <div class="form-group was-validated">
+                                            <div><label class="control-label">3. Quý khách vui lòng đánh giá chất lượng tư vấn qua Trung tâm dịch vụ khách hàng?* </label></div>
+
+                                            <div class="custom-control custom-radio ">
+
+                                                @Html.RadioButtonFor(m => m.Rating, "Rất hài lòng", htmlAttributes: new
+                                                {
+                                                    @class = "custom-control-input ",
+                                                    id = "materialGroupExample1",
+                                                    required = "required"
+                                           })
+                                                <label class="custom-control-label" for="materialGroupExample1">Rất hài lòng</label>
+                                            </div>
+
+                                            <!-- Group of material radios - option 2 -->
+                                            <div class="custom-control custom-radio">
+                                                @Html.RadioButtonFor(m => m.Rating, "Tốt", htmlAttributes: new { @class = "custom-control-input ", id = "materialGroupExample2", required = "required" })
+                                                <label class="custom-control-label" for="materialGroupExample2">Tốt</label>
+                                            </div>
+
+                                            <div class="custom-control custom-radio">
+                                                @Html.RadioButtonFor(m => m.Rating, "Bình thường, chấp nhận được", htmlAttributes: new { @class = "custom-control-input ", id = "materialGroupExample3", required = "required" })
+                                                <label class="custom-control-label" for="materialGroupExample3">Bình thường, chấp nhận được</label>
+                                            </div>
+
+                                            <!-- Group of material radios - option 3 -->
+                                            <div class="custom-control custom-radio">
+                                                @*<img src=@Url.Content("~/Resources/FormPic/Sad.png") width="100"  for="materialGroupExample3" />*@
+                                                @Html.RadioButtonFor(m => m.Rating, "Chưa tốt", htmlAttributes: new { @class = "custom-control-input ", id = "materialGroupExample4", required = "required" })
+                                                <label class="custom-control-label" for="materialGroupExample4">Chưa tốt</label>
+                                            </div>
+
+                                            <div class="custom-control custom-radio">
+                                                @Html.RadioButtonFor(m => m.Rating, "Quá tệ", htmlAttributes: new { @class = "custom-control-input ", id = "materialGroupExample5", required = "required" })
+                                                <label class="custom-control-label" for="materialGroupExample5">Quá tệ</label>
+                                                <div class="invalid-feedback">“Quý khách vui lòng chọn đánh giá phù hợp”</div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- Contct-->
+                                        <div class="form-group was-validated">
+                                            <div><label class="control-label">4. Quý khách vui lòng đánh giá chất lượng tư vấn qua Trung tâm dịch vụ khách hàng?* </label></div>
+
+
+                                            <div class="custom-control custom-radio">
+                                                @Html.RadioButtonFor(m => m.ContactType, "Hotline (1900 6929)", htmlAttributes: new { @class = "custom-control-input", id = "GroupExample1", required = "required" })
+                                                <label class="custom-control-label" for="GroupExample1">Hotline (1900 6929)</label>
+                                            </div>
+
+                                            <!-- Group of material radios - option 2 -->
+                                            <div class="custom-control custom-radio">
+                                                @Html.RadioButtonFor(m => m.ContactType, "Webchat", htmlAttributes: new { @class = "custom-control-input", id = "GroupExample2", required = "required" })
+                                                <label class="custom-control-label" for="GroupExample2">Webchat</label>
+                                            </div>
+
+                                            <!-- Group of material radios - option 3 -->
+                                            <div class="custom-control custom-radio">
+                                                @*<img src=@Url.Content("~/Resources/FormPic/Sad.png") width="100"  for="materialGroupExample3" />*@
+                                                @Html.RadioButtonFor(m => m.ContactType, "Facebook", htmlAttributes: new { @class = "custom-control-input", id = "GroupExample3", required = "required" })
+                                                <label class="custom-control-label" for="GroupExample3">Facebook</label>
+                                            </div>
+
+                                            <div class="custom-control custom-radio">
+                                                @*<img src=@Url.Content("~/Resources/FormPic/Sad.png") width="100"  for="materialGroupExample3" />*@
+                                                @Html.RadioButtonFor(m => m.ContactType, "Email", htmlAttributes: new { @class = "custom-control-input", id = "GroupExample4", required = "required" })
+                                                <label class="custom-control-label" for="GroupExample4">Email</label>
+                                                <div class="invalid-feedback">“Quý khách vui lòng chọn kênh giao dịch với Ngân hàng”</div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label for="StaffName">5. Quý khách có nhớ được tên Tổng đài viên/ Nhân viên hỗ trợ mình qua Trung tâm Dịch vụ khách hàng ?</label>
+                                            <footer class="blockquote-footer">Nhân viên : Hung / Vu / Nhu / Trang / Tam</footer>
+                                            @Html.TextBoxFor(m => m.StaffName, new { id = "StafName", @class = "form-control", placeholder = "Tên Tổng đài viên/ Nhân viên hỗ trợ" })
+
+                                        </div>
+
+
+                                        <!--<div id="captcontainer">
+    <div class="label"> <img src="captcha.php" alt="CAPTCHA Image" class="captchaimg"> </div>
+    <div class="">
+        <label for="captcha">   CAPTCHA</label>
+        <input type="text" class="form" name="captcha" id="captcha" tabindex="5" class="formtext">-->
+                                        <!-- captcha font http://www.dafont.com/crimes-times-six.font -->
+                                        <!--</div>
+    </div>-->
+
+                                        <p></p>
+
+                                        <div class="alert alert-success valid-tooltip" role="alert">
+                                            <div>
+                                                <strong>Success!</strong> Cảm ơn Quý khách đã dành thời gian đánh giá chất lượng dịch vụ của Kienlongbank.
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <table onload="getCaptcha()">
+                                                <tr>
+                                                    <td>Captcha</td>
+                                                    <td><canvas width="220" height="60" style="border: 2px solid grey;color:lightgrey" id="canvas"></canvas> <button type="button" class="btn btn-dark btn-sm" onclick="getCaptcha()">Refresh</button></td>
+                                                    <td></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Enter Captcha</td>
+                                                    <td><input type="text" size="30" id="typeText" class="form-control" required /></td>
+                                                    
+                                                    <td style="right:100px"><button type="submit" id="submit" class="btn btn-outline-primary btn-lg">GỬI ĐÁNH GIÁ</button></td>
+                                                </tr>
+
+                                            </table>
+                                        
+                                        </div>
+                                        <div></div>
+
+                                       
+
+
+                                    </div>
+
+                                </section>
+                            
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        function myalert() {
+            alert("Cảm ơn Quý khách đã dành thời gian đánh giá chất lượng dịch vụ của Kienlongbank");
+        };
+        function GetRandIndex()
+        {
+            // to get
+            return Math.floor(Math.random()*maxLength);
+        }
+        var data;
+        $(function () { /*getCaptcha(); */});
+
+        function getCaptcha()
+        {
+            var canvas = document.getElementById('canvas');
+            var pen = canvas.getContext('2d');
+            var captch = Math.random().toString(36).substring(2, 8);
+
+            pen.font = "30px Georgia";
+            pen.fillStyle = "grey";
+            pen.fillRect(0, 0, 400, 400);
+            pen.fillStyle = "orange";
+            maxLength = captch.length;
+            index1 = GetRandIndex(maxLength);
+            index2 = GetRandIndex(maxLength);
+
+
+            captch = captch.substring(0, index1 - 1) + captch[index1].toUpperCase() + captch.substring(index1 + 1, maxLength);
+            captch = captch.substring(0, index2 - 1) + captch[index2].toUpperCase() + captch.substring(index2 + 1, maxLength);
+
+            data = captch;
+            captch = captch.split('').join(' ');
+            pen.fillText(captch, 40, 40);
+        }
+
+        //require check fix
+        
+            function checkIt() {
+                typedData = document.getElementById('typeText').value;
+                if (typedData == data) {
+                    alert('Cảm ơn Quý khách đã dành thời gian đánh giá chất lượng dịch vụ của Kienlongbank');
+                    getCaptcha();
+                    document.getElementById('typeText').value = "";
+                    return true;
+                    
+                }
+                else {
+
+                    alert('Quý khách vui lòng nhập mã xác thực để hoàn tất việc đánh giá.');
+                    //document.getElementById('Survey').event.preventDefault;
+                     //document.getElementById('Submit').event.preventDefault;
+                    //$('#submit :submit').click(return (false);)
+                   
+                    getCaptcha();
+                    return false;
+                    
+
+                }
+
+            }
+        
+            
+    </script>
+
+
+}
+
+@*@section Scripts
+    {
+        <script>
+            $("#captcontainer").slideDown(450);
+            $("#Survey").submit(function (e) {
+                e.preventDefault();
+                var usercaptchaval = $("#captcha").val();
+                if (usercaptchaval == "") {
+                    usercaptchaval = "None!";
+                }
+
+                $.ajax({
+              url: "session-check.php",
+              cache: false
+                }).done(function (newstr) {
+                    var captchasolve = newstr;
+                    var newhtml = "<p><strong>CAPTCHA Value</strong>: " + newstr + "<br>";
+                    newhtml += "<strong>Entered Text</strong>: " + usercaptchaval + "<br></p>";
+                    $("#submitresults").html(newhtml);
+                });
+            });
+        </script>
+    }*@

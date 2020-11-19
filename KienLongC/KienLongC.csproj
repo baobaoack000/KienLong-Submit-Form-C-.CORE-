@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>637647d1-e6d0-4a55-b4c5-cfd85e690ecb</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200908040649_Fix.cs" />
+    <Compile Remove="Migrations\20200908040649_Fix.Designer.cs" />
+    <Compile Remove="Views\Home\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\_ViewStart.cshtml" />
+    <Content Remove="wwwroot\Pic\css\style1.css" />
+    <Content Remove="wwwroot\Pic\css\StyleSheet.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Captcha" Version="4.4.2" />
+    <PackageReference Include="Chart.js" Version="2.9.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Scripts\css\addons\datatables-select.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\datatables-select2.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\datatables.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\datatables2.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\directives.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\flag.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\jquery.zmd.hierarchical-display.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\addons\rating.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\mdb.lite.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\mdb.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\css\modules\animations-extended.min.css.map" />
+    <None Include="wwwroot\lib\Scripts\mdb.js" />
+    <None Include="wwwroot\lib\Scripts\mdb.lite.min.js.map" />
+    <None Include="wwwroot\lib\Scripts\mdb.min.js" />
+    <None Include="wwwroot\lib\Scripts\mdb.min.js.map" />
+    <None Include="wwwroot\Pic\FormPic\Happy.png" />
+    <None Include="wwwroot\Pic\FormPic\Ok.png" />
+    <None Include="wwwroot\Pic\FormPic\Sad.png" />
+    <None Include="wwwroot\Pic\logo.png" />
+  </ItemGroup>
+
+</Project>
